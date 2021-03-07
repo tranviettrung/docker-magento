@@ -71,8 +71,8 @@ RUN curl -o /tmp/ssh2-1.2.tgz https://pecl.php.net/get/ssh2 \
 #RUN pecl install ssh2-1.2 \
 #  && docker-php-ext-enable ssh2
 
-RUN groupadd -g 1000 app \
- && useradd -g 1000 -u 1000 -d /var/www -s /bin/bash app
+RUN groupadd -g 1002 app \
+ && useradd -g 1002 -u 1002 -d /var/www -s /bin/bash app
 
 RUN apt-get install -y gnupg \
   && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
